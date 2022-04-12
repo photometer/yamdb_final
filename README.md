@@ -1,7 +1,8 @@
 [![CI/CD api_yamdb](https://github.com/photometer/yamdb_final/workflows/CI%2FCD%20api_yamdb/badge.svg)](https://github.com/photometer/yamdb_final/actions/workflows/yamdb_workflow.yml)
 
+[comment]: <> (This is for pytest: https://github.com/photometer/yamdb_final/workflows/yamdb_workflow.yml/badge.svg)
+
 # API Yamdb
----
 
 ### Project description:
 The YaMDb project collects user feedback on works. The works are divided into 
