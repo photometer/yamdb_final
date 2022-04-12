@@ -51,7 +51,8 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: photometer/api_yamdb:v1
+          tags: ${{ secrets.DOCKER_USERNAME }}/api_yamdb:v1
+          file: api_yamdb/Dockerfile
 
   deploy:
       runs-on: ubuntu-latest
