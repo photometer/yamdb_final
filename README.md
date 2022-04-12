@@ -1,3 +1,5 @@
+[![Workflow Status](https://github.com/photometer/yamdb_final/actions/workflows/yamdb_forkflow/badge.svg)](https://github.com/photometer/yamdb_final/actions?query=workflow%3Ayamdb_workflow)
+
 # API Yamdb
 ---
 
@@ -14,5 +16,3 @@ the work is formed - a rating. A user can leave only one review per work.
 
 Information about the possibilities of the project can be found at the 
 endpoint ```/redoc/```.
-
-![example workflow](https://github.com/photometer/yamdb_final/actions/workflows/yamdb_forkflow/badge.svg)

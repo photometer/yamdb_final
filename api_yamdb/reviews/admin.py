@@ -1,8 +1,7 @@
 from django import forms
 from django.contrib import admin
 
-from .models import User, Category, Genre, Title, Review, Comment
-
+from .models import Category, Comment, Genre, Review, Title, User
 
 EMPTY = '-пусто-'
 

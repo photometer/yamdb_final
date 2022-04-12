@@ -1,26 +1,24 @@
-from django.db.models import Avg
 from django.contrib.auth.tokens import default_token_generator
 from django.core.mail import send_mail
+from django.db.models import Avg
 from django.shortcuts import get_object_or_404
 from django_filters.rest_framework import DjangoFilterBackend
-from rest_framework import viewsets, status, mixins
+from rest_framework import mixins, status, viewsets
 from rest_framework.decorators import action, api_view, permission_classes
 from rest_framework.filters import SearchFilter
-from rest_framework.permissions import IsAuthenticated, AllowAny
+from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import RefreshToken
+from reviews.models import Category, Genre, Review, Title, User
 
-from .serializers import (
-    UserSerializer, TokenAccessSerializer,
-    CategorySerializer, GenreSerializer, TitleSerializer,
-    ReviewSerializer, CommentSerializer
-)
-from .filters import TitleFilter
-from .permissions import (
-    IsAdminOrSuperUser, IsAdminOrSuperUserOrReadOnly, PermissionReviewComment
-)
-from reviews.models import User, Category, Genre, Title, Review
 from api_yamdb.settings import ADMIN_EMAIL
+
+from .filters import TitleFilter
+from .permissions import (IsAdminOrSuperUser, IsAdminOrSuperUserOrReadOnly,
+                          PermissionReviewComment)
+from .serializers import (CategorySerializer, CommentSerializer,
+                          GenreSerializer, ReviewSerializer, TitleSerializer,
+                          TokenAccessSerializer, UserSerializer)
 
 
 @api_view(['POST'])
