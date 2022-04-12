@@ -1,4 +1,4 @@
-[![Workflow Status](https://github.com/photometer/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)](https://github.com/photometer/yamdb_final/actions/workflows/yamdb_workflow.yml)
+[![Workflow Status](https://github.com/photometer/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)](https://github.com/photometer/yamdb_final/actions?query=workflow%3Ayamdb_workflow)
 
 # API Yamdb
 ---
