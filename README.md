@@ -74,14 +74,12 @@ python manage.py migrate
 Fill the database with first values:
 
 ```bash
-cd ..
-python csvread.py
+python manage.py loaddata fixtures.json
 ```
 
 Run the project:
 
 ```bash
-cd api_yamdb
 python manage.py runserver
 ```
 </details>
