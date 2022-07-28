@@ -335,5 +335,6 @@ PATCH /api/v1/users/me/
 </details>
 
 ### Authors
-[Androsova Elizaveta](), [Max Abramov](https://github.com/AbramovMax), 
+[Androsova Elizaveta](https://github.com/photometer), 
+[Max Abramov](https://github.com/AbramovMax), 
 [Dmitry Shotel](https://github.com/ShotelYa)
