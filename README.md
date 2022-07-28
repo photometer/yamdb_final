@@ -4,7 +4,8 @@
 
 # API Yamdb
 
-### Project description:
+### Project description
+
 The YaMDb project collects user feedback on works. The works are divided into 
 categories: "Books", "Films", "Music". The list of categories can be expanded 
 by the administrator. The works themselves are not stored in YaMDb; you 
@@ -18,11 +19,23 @@ the work is formed - a rating. A user can leave only one review per work.
 Information about the possibilities of the project can be found at the 
 endpoint ```/redoc/```.
 
-### Project installation (Windows)
+### Technologies
+
+- Python;
+- Django-Rest-Framework;
+- PostgreSQL;
+- Gunicorn;
+- Docker/Docker-compose;
+- Nginx;
+- Yandex.Cloud;
+- Github Actions.
+
+<details>
+  <summary><h3> Project installation (Windows) </h3></summary>
 
 Clone repository and switch to it on the command line:
 
-```
+```bash
 git clone https://github.com/photometer/api_yamdb
 cd api_yamdb
 ```
@@ -34,7 +47,7 @@ SECRET_KEY=Your_secret_key
 
 Create and activate vurtual environment:
 
-```
+```bash
 python -m venv venv
 source venv/scripts/activate
 ```
@@ -48,7 +61,7 @@ pip install -r requirements.txt
 
 Go to the directory with the file ```manage.py```:
 
-```
+```bash
 cd api_yamdb
 ```
 
@@ -60,21 +73,23 @@ python manage.py migrate
 
 Fill the database with first values:
 
-```
+```bash
 cd ..
 python csvread.py
 ```
 
 Run the project:
 
-```
+```bash
 cd api_yamdb
 python manage.py runserver
 ```
+</details>
 
-### API request examples:
-
-##### 1. User registration and issuance of tokens
+<details>
+  <summary><h3> API request examples </h3></summary>
+  <details>
+    <summary><h5> 1. User registration and issuance of tokens </h5></summary>
 
 - New user registration (receiving a confirmation code for the transmitted 
 email):
@@ -94,8 +109,9 @@ POST /api/v1/auth/token/
   "confirmation_code": "string"
 }
 ```
-
-##### 2. Categories of works
+  </details>
+  <details>
+    <summary><h5> 2. Categories of works </h5></summary>
 
 - Getting list of all categories:
 ```
@@ -117,12 +133,14 @@ POST /api/v1/categories/
 ```
 DELETE /api/v1/categories/{slug}/
 ```
-
-##### 3. Genres of works
+  </details>
+  <details>
+    <summary><h5> 3. Genres of works </h5></summary>
 
 Similar to categories of works, but by endpoint ```/genres/```.
-
-##### 4. Works
+  </details>
+  <details>
+    <summary><h5> 4. Works </h5></summary>
 
 - Getting list of all works:
 ```
@@ -169,8 +187,9 @@ PATCH /api/v1/titles/{titles_id}/
 ```
 DELETE /api/v1/titles/{titles_id}/
 ```
-
-##### 5. Reviews
+  </details>
+  <details>
+    <summary><h5> 5. Reviews </h5></summary>
 
 - Getting list of all reviews on the work:
 ```
@@ -207,8 +226,9 @@ PATCH /api/v1/titles/{title_id}/reviews/{review_id}/
 ```
 DELETE /api/v1/titles/{title_id}/reviews/{review_id}/
 ```
-
-##### 6. Comments on reviews
+  </details>
+  <details>
+    <summary><h5> 6. Comments on reviews </h5></summary>
 
 - Getting list of comments on the review:
 ```
@@ -243,8 +263,9 @@ PATCH /api/v1/titles/{title_id}/reviews/{review_id}/comments/{comment_id}/
 ```
 DELETE /api/v1/titles/{title_id}/reviews/{review_id}/comments/{comment_id}/
 ```
-
-##### 7. Users
+  </details>
+  <details>
+    <summary><h5> 7. Users </h5></summary>
 
 - Getting list of all users:
 **only for administrators*
@@ -310,6 +331,8 @@ PATCH /api/v1/users/me/
   "bio": "string"
 }
 ```
+  </details>
+</details>
 
 ### Authors
 [Androsova Elizaveta](), [Max Abramov](https://github.com/AbramovMax), 
